@@ -9,6 +9,14 @@ import (
 func main() {
 	input := getInput("input.txt")
 	fmt.Println(countTrees(3, 1, input))
+
+	fmt.Println(
+		countTrees(1, 1, input) *
+			countTrees(3, 1, input) *
+			countTrees(5, 1, input) *
+			countTrees(7, 1, input) *
+			countTrees(1, 2, input),
+	)
 }
 
 func getInput(filename string) [][]int {
