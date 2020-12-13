@@ -33,6 +33,15 @@ func ReadLines(filename string) []string {
 	return data
 }
 
+func ReadInts(filename string) []int {
+	lines := ReadLines(filename)
+	data := []int{}
+	for _, l := range lines {
+		data = append(data, ToInt(l))
+	}
+	return data
+}
+
 func ToInt(s string) int {
 	i, err := strconv.Atoi(s)
 	ErrCheck(err)
