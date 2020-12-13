@@ -41,7 +41,7 @@ func ToInt(s string) int {
 
 func AssertEqual(t *testing.T, have interface{}, want interface{}) {
 	if have != want {
-		t.Fatalf("have: \n%v \nwant: %v", have, want)
+		t.Fatalf("have: \n%v \nwant: \n%v", have, want)
 	}
 }
 
